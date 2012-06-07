@@ -16,7 +16,7 @@ var artistName = ["Britney Spears", "Jason D", "Janet Jackson", "Lyrica", null];
 var artistCount = artistName.lenth;
 var scheduledHours = [2, 4, 6, 8, 12, 16, 18, 24];
 var clientAvail = true;
-var studioType =  ["recording", "mix"];
+var studioType =  ["record", "mix"];
 var workDone = [1, 4, 5 ,7 , 9];
 
 
@@ -29,6 +29,24 @@ var workDone = [1, 4, 5 ,7 , 9];
 	Tells Lyrica that she will have to arrive at least 3 hours after he gets to the studio. She
 	gets to the studio within 2 hours. 
 */
+// Brad is currently working On
+
+function currentlyWorking (artistName, engineer, time) {
+	
+	console.log( engineer + " is currently working with " + artistName + " for " + time + " hours ");
+	
+	return time;
+	
+}
+
+currentlyWorking(artistName[0], engineerName[0], 4 )
+
+// The timer of how much time the Engineer is using
+
+for (var i=0; i < time.length; i--) {
+	time[i]
+};
+
 
 //The amount of time that Brad has completed and is Scheduled working.
 
@@ -38,13 +56,16 @@ var bradTime = function (scheduledHours, workDone, requestedHours, artistName) {
 	
 	if (workDone - scheduledHours || timeLeft >= requestedHours) {
 		
-		console.log("Brad will have enough time to " + studioType[0] + artistName )
+		console.log("Brad will have enough time to " +  studioType[0] + artistName )
 	} else{console.log( "brad will not have time to schedule " + artistName ) };
 
-
+	return timeLeft;
 }
 
 bradTime( 12, workDone[1], 3, artistName[3] );
+
+
+
 
 
 var workingOn = function (scheduledHours, workDone) {
