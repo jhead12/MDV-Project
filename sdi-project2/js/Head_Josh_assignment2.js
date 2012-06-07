@@ -18,6 +18,7 @@ var scheduledHours = [2, 4, 6, 8, 12, 16, 18, 24];
 var clientAvail = true;
 var studioType =  ["record", "mix"];
 var workDone = [1, 4, 5 ,7 , 9];
+var request = true;
 
 
 
@@ -47,20 +48,23 @@ function timeAvail (engineerName, scheduledHours, workDone) {
 	
 	var time = scheduledHours - workDone;
 	
-	console.log( "There are " + time + " hours left for " + engineerName )
+	console.log( "There are " + time + " hours left for the working day of " + engineerName + " after recording " + artistName[0] )
 	
+	return timeAvail;
 	
 };
 
-// This is the time avail Function
 
-timeAvail(engineerName[0], engineerTime( 12, 4 ), 3);
+timeAvail(engineerName[0], engineerTime( 12, 4 ), workDone[1]);
+// This is the time avail after recoring current artist
+
+
 
 function engineerTime (scheduled, currentTime) {
 	
 	var timeAvail = scheduled - currentTime;
 	
-	console.log("He has " + timeAvail + "hours left to " + "record" )
+	console.log("He has " + timeAvail + "hours left to " + "record current artist" )
 	
 	return timeAvail;
 	
@@ -69,7 +73,10 @@ function engineerTime (scheduled, currentTime) {
 
 
 
-//The amount of time that Brad has completed and is Scheduled working.
+/*
+The amount of time that Brad has completed and is Scheduled working, is there Availabilty
+for a quick inbetween session ? */
+
 
 var bradTime = function (scheduledHours, workDone, requestedHours, artistName) {
 	
@@ -85,6 +92,13 @@ var bradTime = function (scheduledHours, workDone, requestedHours, artistName) {
 
 bradTime( 12, workDone[1], 3, artistName[3] );
 
+
+// while brad works with Lyrica the count down to his next session with Jason D.
+
+
+for (var i=0; i < 5; i--) {
+	timeAvail[i]
+};
 
 
 // currently Working on Function
