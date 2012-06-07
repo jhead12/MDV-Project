@@ -41,11 +41,32 @@ function currentlyWorking (artistName, engineer, time) {
 
 currentlyWorking(artistName[0], engineerName[0], 4 )
 
-// The timer of how much time the Engineer is using
+// This is a  timer of how much time is left for the engineer.
 
-for (var i=0; i < time.length; i--) {
-	time[i]
+function timeAvail (engineerName, scheduledHours, workDone) {
+	
+	var time = scheduledHours - workDone;
+	
+	console.log( "There are " + time + " hours left for " + engineerName )
+	
+	
 };
+
+// This is the time avail Function
+
+timeAvail(engineerName[0], engineerTime( 12, 4 ), 3);
+
+function engineerTime (scheduled, currentTime) {
+	
+	var timeAvail = scheduled - currentTime;
+	
+	console.log("He has " + timeAvail + "hours left to " + "record" )
+	
+	return timeAvail;
+	
+	
+}
+
 
 
 //The amount of time that Brad has completed and is Scheduled working.
@@ -59,14 +80,14 @@ var bradTime = function (scheduledHours, workDone, requestedHours, artistName) {
 		console.log("Brad will have enough time to " +  studioType[0] + artistName )
 	} else{console.log( "brad will not have time to schedule " + artistName ) };
 
-	return timeLeft;
+	return ;
 }
 
 bradTime( 12, workDone[1], 3, artistName[3] );
 
 
 
-
+// currently Working on Function
 
 var workingOn = function (scheduledHours, workDone) {
 
