@@ -64,7 +64,7 @@ function engineerTime (scheduled, currentTime) {
 	
 	var timeAvail = scheduled - currentTime;
 	
-	console.log("He has " + timeAvail + "hours left to " + "record current artist" )
+	console.log("He has " + timeAvail + "hours left to " + " record current artist" )
 	
 	return timeAvail;
 	
@@ -84,23 +84,26 @@ var bradTime = function (scheduledHours, workDone, requestedHours, artistName) {
 	
 	if (workDone - scheduledHours || timeLeft >= requestedHours) {
 		
-		console.log("Brad will have enough time to " +  studioType[0] + artistName )
-	} else{console.log( "brad will not have time to schedule " + artistName ) };
+		console.log("Brad will have enough time to " +  studioType[0]   +  artistName )
+	} else{console.log( "brad will not have time to schedule " +  artistName ) };
 
-	return ;
+	return bradTime;
 }
 
-bradTime( 12, workDone[1], 3, artistName[3] );
+var bradTime = bradTime( 12, workDone[1], 3, artistName[3] );
 
 
 // while brad works with Lyrica the count down to his next session with Jason D.
 
 
-for (var i=0; i < 5; i--) {
-	timeAvail[i]
+for (var bradTime = 4; bradTime > 0; bradTime--) {
+	console.log( bradTime + " hours Left!");
+	
+	
 };
 
 
+console.log("It's time to go home!");
 // currently Working on Function
 
 var workingOn = function (scheduledHours, workDone) {
@@ -118,11 +121,11 @@ if (engineerCount > artistCount) {
        console.log("We are able to record the artist; Let\'s Go!"); }
    
     else {
-        var engineerLeft = engineerCount - artistCount
-        console.log("We need ", engineerLeft, " We do not have any space available.") ;}
+        var engineerLeft = engineerCount - artistCount;
+        console.log("We do not have any space available.") ;}
 if
      (engineerName[2]) {
-        console.log( engineerName[2], "is the best engineer in the studio."); }
+        console.log( engineerName[2], "will be available Tommorow."); }
     else {
         var Taunt = engineerengineerName + " is not as good " + OwnerFullName + "!";
         console.log(Taunt); }
