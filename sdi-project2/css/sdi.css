@@ -8,8 +8,9 @@ body {
     background-color: white;
     color: #4D4B39;
     max-width: 35em;
-    border: 0.75em solid #A6A59C;
+    border: 0.75em solid #0000F4;
     line-height: 1.5em;
+	
 }
 p {
     margin: 1.5em 0;

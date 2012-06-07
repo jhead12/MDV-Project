@@ -15,7 +15,7 @@ var engineerName = ["Brad","Jason","Dave", "Brian"];
 var engineerCount = engineerName.lenth;	
 var artistName = ["Britney Spears", "Jason D", "Janet Jackson", "Lyrica"];
 var artistCount = artistName.lenth;
-var mixHours = [4, 6, 8, 12, 16, 18, 24]
+var mixHours = 2, 4, 6, 8, 12, 16, 18, 24;
 var clientAvail = true;
 
 /*

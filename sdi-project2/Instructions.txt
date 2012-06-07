@@ -1,0 +1,124 @@
+Your project requires five functions:
+
+ One function that doesn't return a value (a procedure).
+    
+One function that takes two arguments and does some kind of Boolean comparison between them. The data type of the arguments doesn't matter for this function.
+
+ One function that does something interesting with strings, after taking two strings as arguments. This can be simple concatenation, but you are encouraged to look into other, more interesting string applications.
+    
+One function that takes a single number and uses it in a while loop somehow, doing some math at the same time. This can be something simple like counting or summing, but again you are encouraged to look into more interesting applications.
+   
+One function that takes an array and a number and uses them in a for loop of some kind. This should not be a simple index dereference (looking up one value by its index). Make it something more interesting.
+
+Since four of those functions return values, you should do something interesting with the values when you get them back. You are encouraged, but not required, to use the return values from earlier functions as the inputs for later functions. You'll need this for Project 3, so it's something you should get comfortable with now.
+
+#############################################################################################
+
+Arguments
+
+You'll notice on your Project 2 Flowchart that all of your functions take arguments of some kind. That should be a hint for how important arguments are. As you get further into the program, you'll find that you will only extremely rarely call functions that don't take any arguments.
+
+Some of the functions in your project require arguments with specific data types (Number, String, Array). Others, marked simply "Argument", can be whatever data type you choose. Your functions can accept more arguments than those on the flowchart, but they cannot accept fewer.
+
+#############################################################################################
+
+Return Values
+
+If you check your project flowchart you'll see that you have four functions that need to return values. Those four values are also the four basic data types that you've learned to this point. You are of course welcome to include additional functions with additional return values, but those basic four must be present, along with at least one function that does not return a value (procedure).
+
+#############################################################################################
+
+Boolean
+
+
+Activity: Boolean Logic (30m)
+( Due: Thu, 07 Jun | Status: Completed )
+
+Boolean logic isn't a new concept—in last month's Finite Math course you learned about truth tables and logical operations including AND, OR, NOT, and XOR. It shouldn't surprise you that conditional tests with the if statement don't have to be single yes/no questions. They can be as complex as you need them to be, and follow the same rules of Boolean logic that you've seen.
+
+Boolean expressions may not be the most exciting stuff, but the ability to make complex decisions is one of those core things that you'll never get away from as a coder.
+Objectives & Outcomes
+
+Successful completion of this activity will show that you can:
+
+    Translate between mathematical Boolean operators and their programming equivalents.
+    Code complex Boolean expression statements.
+    Break down and evaluate complex Boolean expressions.
+
+Level of Effort
+
+This activity should take approximately 30m to complete. It will require:
+
+    15m Research
+    15m Work
+
+If you find that this activity takes you significantly less or more time than this estimate, please contact me for guidance.
+Reading & Resources
+Book
+Topics in Finite and Discrete Mathematics 	Chapters:	1 	Pages:	8-16
+Author:	Sheldon M. Ross	ISBN:	978-0521775717
+Publisher:	Cambridge University Press	Edition:	2000
+This is your textbook from last month's Finite Math course.
+Web link
+
+Logical Operators on MDC
+    The Mozilla Developer documentation on logical operators may be helpful if you didn't feel comfortable with logic from last month.
+
+Instructions
+
+The four basic logical operations have equivalents in JavaScript:
+Mathematical	JavaScript
+Logical	Symbol	Example	Syntax	Example
+AND	∧	p ∧ q	&&	p && q
+OR 	∨ 	p ∨ q 	||	p || q
+NOT	¬	¬p 	!	!p
+XOR	⊕	p ⊕ q	 	(p || q) && !(p && q)
+
+Look at that last line for the XOR operation and recall that XOR means "either one or the other but not both". There isn't a real JavaScript equivalent, but that you can recreate it using the other three operations. This also shows off how parentheses are used to group logic operations, just like they are in math. The JavaScript example for the XOR reads "the expression is true if (p is true or q is true) and not (both p and q are true)".
+
+You had the following example in Finite Math:
+
+    p: The butler committed a crime.
+    q: A crime took place in the foyer.
+    r: There is evidence who committed the crime.
+
+You were told to evaluate expressions when given p as True and q and r as False. The setup for that in JavaScript would be:
+1
+	
+var p = true, q = false, r = false;
+
+You could then have JavaScript evaluate the expressions you were given:
+2
+3
+4
+5
+6
+7
+	
+// Given: (p ∧ q) ∨ r
+if ((p && q) || r) {
+    console.log("The expression is true");
+} else {
+    console.log("The expression is false");
+}
+
+Actually, you don't even need the if block here, and can write it a little shorter:
+2
+	
+console.log("The expression is " + ((p && q) || r));
+
+JavaScript will evaluate the Boolean expression, give back a true or false, convert it to a string, and concatenate it to first string.
+
+For practice, you should convert the other given expressions to JavaScript:
+
+    p ∧ (q ∨ r)
+    (p ∧¬ q) ∨ (q ∧ r)
+    ¬(p ∨ r)
+
+Your project requires some kind of Boolean expression. It doesn't need to be ridiculously complex, but it should show that you understand the concepts here. At a bare minimum, your project should use two of the three logical operators JavaScript offers.
+
+
+############################################################################################ 
+
+
+
