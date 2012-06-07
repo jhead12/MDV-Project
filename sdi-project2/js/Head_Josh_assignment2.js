@@ -17,7 +17,8 @@ var artistCount = artistName.lenth;
 var scheduledHours = [2, 4, 6, 8, 12, 16, 18, 24];
 var clientAvail = true;
 var studioType =  ["recording", "mix"];
-var workDone = [1, 3, 5 ,7 , 9];
+var workDone = [1, 4, 5 ,7 , 9];
+
 
 
 /*
@@ -29,41 +30,31 @@ var workDone = [1, 3, 5 ,7 , 9];
 	gets to the studio within 2 hours. 
 */
 
-//The amount of time that Brad has
+//The amount of time that Brad has completed and is Scheduled working.
 
-var workingOn = function ( timeLeft, engineerName ) {
-
-		var timeLeft = scheduledHours[3] - workDone[0];
-		
-		
-if (timeLeft > scheduledHours) {
-	console.log( engineerName[0] +  'can have ' + 'another Artist comee in for' + studioType[1] );
+var bradTime = function (scheduledHours, workDone, requestedHours, artistName) {
 	
+	var timeLeft = scheduledHours - workDone;
+	
+	if (workDone - scheduledHours || timeLeft >= requestedHours) {
+		
+		console.log("Brad will have enough time to " + studioType[0] + artistName )
+	} else{console.log( "brad will not have time to schedule " + artistName ) };
 
-} else {scheduledHours < timeLeft };
-			
-			console.log( "There is no time for me to " + studioType[1]);
 
-			return timeLeft;
-				
+}
+
+bradTime( 12, workDone[1], 3, artistName[3] );
+
+
+var workingOn = function (scheduledHours, workDone) {
+
+		var timeLeft = scheduledHours - workDone;
+		
+		
+		console.log( timeLeft );
+		return timeLeft;
 	};
-	
-	
-	
- for (var i=0; i < timeLeft(); i++) {
-	workingOn[i]
-	
-	console.log()
-	
-	
-};
-
-workingOn();
-
-/*
-	TODO I have to create a loop, arguement, and return fuction for the 4 new variables
-*/
-
 
 
 
