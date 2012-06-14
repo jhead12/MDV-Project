@@ -10,19 +10,20 @@ The Studio in detail
 
 
 // Global variables Property and Methods
-var studioA = studio.facility[0].room;
-var studioB = studio.facility[1].room;
-var studioC = studio.facility[2].room;
-
-var allRooms = studioA && studioB && studioC;
+var studioA = studio.facility[0]; 	//accessor Method
+var studioB = studio.facility[1];	//accessor Method
+var studioC = studio.facility[2];	//accessor Method
 
 
-var studioA = {
+// Local Variables
+
+var studioA  = {
 		name: "Briney Spears",
 		getHours: function (time) {},
 		hungry: true,
 		runner: true,
-		food: ["sushi", "wine", "subway"]			
+		food: ["sushi", "wine", "subway"],
+		facility: studio.facility[0]		
 	
 };
 
@@ -31,7 +32,8 @@ var studioB = {
 		getHours: function (time) {},
 		hungry: false,
 		runner: true,
-		food: function () {console.log("I'm not Hungry")}
+		food: function () {console.log("I'm not Hungry")},
+		facility: studio.facility[1]
 		
 		};
 		
@@ -40,15 +42,22 @@ var studioC = {
 		getHours: function (time) {},
 		hungry: true,
 		runner: false,
-		food: [" Mexican Food"]
+		food: " Mexican Food",
+		facility: studio.facility[2]
 
 		};
 
 
-var data = function (json) {
-	console.log(json);	
+var currentSessions = [studioA, studioB, studioC];	//function Method
+
+console.log(currentSessions);
+
+
+	
+	
 		
-};
+
+
 
 
 
@@ -64,7 +73,7 @@ for (var i=0; i < studio.facility.length; i++) {
 
 
 
-data(studio);
+
 
 // Studio C Needs a Runner!!
 
@@ -80,12 +89,27 @@ if (studioB.runner && studioB.hungry || studioA.runner && studioA.hungry ) {
 	console.log("since there are no runners in this room and there is a runner available " + studioC.name + " said: go get the Runner from " +  studio.facility[1].room)
 }
 
+
 else
 
 	{console.log( studioC.name + " said: We Need a Runner in Studio C! ")};
 	
+
+
 	
 // The studio owener wanted to know how many hours were left in the recording session with Gyote.
+
+
+
+if (studioB.getHours[5]< studio.facility[1].hours) {
+	
+
+	
+	console.log(" There are only " + hoursLeft  + " in the Session ");
+	
+	
+	
+};
 
 
 	
