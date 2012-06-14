@@ -19,7 +19,7 @@ var studioC = studio.facility[2];	//accessor Method
 
 var studioA  = {
 		name: "Briney Spears",
-		getHours: function (time) {},
+		getHours: function (time) {};
 		hungry: true,
 		runner: true,
 		food: ["sushi", "wine", "subway"],
@@ -69,7 +69,8 @@ for (var i=0; i < studio.facility.length; i++) {
 for (var i=0; i < [studioA.name, studioB.name, studioC.name].length; i++) {
 	
 	
-	var currentNames = [(studioA.name + " in " +  studio.facility[0].room), (studioB.name + " in " +  studio.facility[1].room), (studioC.name + " in " +  studio.facility[2].room)][i];
+	var currentNames = [(studioA.name + " in " +  studio.facility[0].room), 
+	(studioB.name + " in " +  studio.facility[1].room), (studioC.name + " in " +  studio.facility[2].room)][i];
 
 	
 	console.log("currently working in the studio is " + currentNames )
@@ -81,7 +82,7 @@ function hoursLeft (time) {
 	var hours = studio.facility[0].hours;
 	var hoursLeft = hours - time;
 	
-	console.log("We have " + hoursLeft + " time  to record ");
+	console.log("We have " + hoursLeft + " hours to record in studio A ");
 	
 	
 	
@@ -95,9 +96,9 @@ function hoursLeft (time) {
 	return hoursLeft;
 };
 
-hoursLeft(12);
+hoursLeft(3);
 
-console.log(studio.facility[0].hours)
+// console.log(studio.facility[0].hours)
 
 
 
@@ -124,7 +125,7 @@ if (micA) {
 	
 if (studioA.hungry + studioA.runner){
 	
-	console.log("Go get some food and what I want to eat is " + studioA.food)
+	console.log("Go get some food and what I want to eat is " + studioA.food  + " said " +  studioA.name)
 	
 }
 
@@ -136,9 +137,6 @@ function timeLeft (time, studio) {
 		
 		return timeLeft;
 };
-
-studioA.getHours(5);
-console.log(studioA)
 
 
 
@@ -166,10 +164,13 @@ else
 
 	
 // The studio owener wanted to know how many hours were left in the recording session with Gyote.
+// Mean while in studio B Artist Gyote has been recording his new hit single, he has been in the studio for 5 hours.
 
 
+console.log(studioB.getHours[5]);
 
-if (studioB.getHours[5]< studio.facility[1].hours) {
+
+if (studioB.getHours < studio.facility[1].hours) {
 	
 
 	
@@ -185,8 +186,4 @@ if (studioB.getHours[5]< studio.facility[1].hours) {
 	
 
 
-
-
-// 
-var jsonstring = JSON.stringify()
 
