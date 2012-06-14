@@ -14,12 +14,11 @@ var studioA = studio.facility[0]; 	//accessor Method
 var studioB = studio.facility[1];	//accessor Method
 var studioC = studio.facility[2];	//accessor Method
 
-
 // Local Variables
 
 var studioA  = {
 		name: "Briney Spears",
-		getHours: function (time) {};
+		getHours: function (hours){},
 		hungry: true,
 		runner: true,
 		food: ["sushi", "wine", "subway"],
@@ -51,7 +50,7 @@ var studioC = {
 var currentSessions = [studioA, studioB, studioC];	//function Method
 
 
-console.log(currentSessions);
+// console.log(currentSessions);
 
 
 // JSon Call and for loop - Who is working
@@ -167,14 +166,6 @@ else
 // Mean while in studio B Artist Gyote has been recording his new hit single, he has been in the studio for 5 hours.
 
 
-console.log(studioB.getHours[5]);
-
-
-if (studioB.getHours < studio.facility[1].hours) {
-	
-
-	
-	console.log(" There are only " + hoursLeft  + " in the Session ");
 	
 	
 	
