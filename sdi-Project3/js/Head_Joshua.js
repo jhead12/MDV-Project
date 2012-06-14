@@ -8,6 +8,7 @@ The Studio in detail
 */
 
 
+
 // Global variables Property and Methods
 var studioA = studio.facility[0].room;
 var studioB = studio.facility[1].room;
@@ -49,6 +50,20 @@ var data = function (json) {
 		
 };
 
+
+
+// JSon Call and for loop - Who is working
+
+for (var i=0; i < studio.facility.length; i++) {
+	var facility = studio.facility[i];
+	console.log(" All the studio's are booked and " + facility.engineer  + " is " +  facility.kind  +  " in " +  facility.room )
+
+	
+
+};
+
+
+
 data(studio);
 
 // Studio C Needs a Runner!!
@@ -76,15 +91,6 @@ else
 	
 	
 	
-// JSon Call and for loop - Who is working
-
-for (var i=0; i < studio.facility.length; i++) {
-	var facility = studio.facility[i];
-	console.log(" All the studio's are booked and " + facility.engineer  + " is " +  facility.kind  +  " in " +  facility.room )
-
-	
-
-};
 
 
 
