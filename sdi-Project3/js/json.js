@@ -4,7 +4,7 @@ var studio = {
 	"facility": [ 
 		{
 			"room": "Studio A",
-			"kind": ["Mixing","Recording"],
+			"kind": ["Mixing" || "Recording"],
 			"board": "SSL",
 			"Mic": "Sony 800g",
 			"preAmp": "Neve 1084",
