@@ -59,8 +59,20 @@ console.log(currentSessions);
 for (var i=0; i < studio.facility.length; i++) {
 	var facility = studio.facility[i];
 	console.log(" All the studio's are booked and " + facility.engineer  + " is " +  facility.kind  +  " in " +  facility.room )
+	
 
 	
+};
+
+// A for Loop statement for what studio each artist is working in.
+
+for (var i=0; i < [studioA.name, studioB.name, studioC.name].length; i++) {
+	
+	
+	var currentNames = [(studioA.name + " in " +  studio.facility[0].room), (studioB.name + " in " +  studio.facility[1].room), (studioC.name + " in " +  studio.facility[2].room)][i];
+
+	
+	console.log("currently working in the studio is " + currentNames )
 };
 
 // How many hours are there left to record in studio A.
@@ -69,7 +81,7 @@ function hoursLeft (time) {
 	var hours = studio.facility[0].hours;
 	var hoursLeft = hours - time;
 	
-	console.log("We have " + hoursLeft + " to record ");
+	console.log("We have " + hoursLeft + " time  to record ");
 	
 	
 	
