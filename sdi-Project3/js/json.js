@@ -1,24 +1,38 @@
-var json = {
-	"facility":  {
-			"StudioA": "Recording / Mix"
+// Data File
+
+var studio = {
+	"facility": [ 
+		{
+			"room": "Studio A",
+			"kind": ["Mixing","Recording"],
 			"board": "SSL",
-			"Mic": ["Sony 800g", "Shure Sm57", "AKG C451"],
-			"preAmp": "Neve 1084"
-				},
-				{
-			"studioB": "Recording",
+			"Mic": "Sony 800g",
+			"preAmp": "Neve 1084",
+			"engineer": "Brad",
+			"hours": 12
+		},
+		{
+			"room": "Studio B",
+			"kind": "recording",
 			"board": "SSL AWS 900",
 			"Mic": "Neumann U 87",
-			"preAmp": "Manley Slam!"
-				},
-				{
-			"studioC": "Recording",
-			"board":"Euphonix",
-			"Neuman u 87",
-			"preAmp": "Manley Slam!" 
+			"preAmp": "Manley Slam!",
+			"engineer":"Jason",
+			"hours": 8,
+		},
+		{
+			"room": "Studio C",
+			"kind": "recording",
+			"board": "Euphonix",
+			"mic": "Neuman u87",
+			"preAmp": "Manley Slam!",
+			"engineer":"Dave",
+			"hours": 12
 					
-				},
+		}
+	
 	]
 	
-	
-}
+};
+
+
