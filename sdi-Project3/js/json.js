@@ -24,7 +24,7 @@ var studio = {
 			"room": "Studio C",
 			"kind": "recording",
 			"board": "Euphonix",
-			"mic": "Neuman u87",
+			"Mic": "Neuman TLM",
 			"preAmp": "Manley Slam!",
 			"engineer":"Dave",
 			"hours": 16

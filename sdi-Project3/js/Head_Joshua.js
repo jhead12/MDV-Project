@@ -50,15 +50,8 @@ var studioC = {
 
 var currentSessions = [studioA, studioB, studioC];	//function Method
 
+
 console.log(currentSessions);
-
-
-	
-	
-		
-
-
-
 
 
 // JSon Call and for loop - Who is working
@@ -68,14 +61,77 @@ for (var i=0; i < studio.facility.length; i++) {
 	console.log(" All the studio's are booked and " + facility.engineer  + " is " +  facility.kind  +  " in " +  facility.room )
 
 	
-
 };
 
+// How many hours are there left to record in studio A.
+
+function hoursLeft (time) {
+	var hours = studio.facility[0].hours;
+	var hoursLeft = hours - time;
+	
+	console.log("We have " + hoursLeft + " to record ");
+	
+	
+	
+	if (hoursLeft <= 2) {
+		
+		console.log(" We have have a limited amount of time!");
+	}	
+	if (hoursLeft == 0){ console.log("We have No time!")}	
+	;
+	
+	return hoursLeft;
+};
+
+hoursLeft(12);
+
+console.log(studio.facility[0].hours)
+
+
+
+// If there is a Sony Mic in studio A then the session with go 4 hours, faster than scheduled time.
+
+
+
+var micA = studio.facility[0].Mic;
+var micB = studio.facility[1].Mic;
+var micC = studio.facility[2].Mic;
+
+var allMics = [micA, micB, micC];
+
+/*
+  The proper mic was in studio A, therefore Britney will record here vocals with fewer takes cuting recording
+ time to 4 hours*/
+
+
+if (micA) {
+	// TimeLeft after session
+
+	
+	console.log( "We are going to be done early tonight! Said: " + studioA.name )
+	
+if (studioA.hungry + studioA.runner){
+	
+	console.log("Go get some food and what I want to eat is " + studioA.food)
+	
+}
+
+		
+};
+
+function timeLeft (time, studio) {
+		var timeLeft = studio - time;
+		
+		return timeLeft;
+};
+
+studioA.getHours(5);
+console.log(studioA)
 
 
 
 
-// Studio C Needs a Runner!!
+// Is there food in studio C? If Not we have to get a runner?
 
 if (studioC.runner && studioC.hungry){ 
 	console.log( studioC.name + " said: Go get some " + studioC.food)}
@@ -91,7 +147,7 @@ if (studioB.runner && studioB.hungry || studioA.runner && studioA.hungry ) {
 
 
 else
-
+// there wasnt a runner.
 	{console.log( studioC.name + " said: We Need a Runner in Studio C! ")};
 	
 
