@@ -8,22 +8,44 @@ The Studio in detail
 */
 
 
-// Property
+// Global variables Property and Methods
 
- 
-var studioA ={
+ // Britney Spears
+var studioA = {
 		name: "Briney Spears",
-		studioHours: 8,
+		getHours: function (time) {},
 		hungry: true,
 		runner: true,
-		food: ["sushi", "wine", "subway"], 
-		
-		   
-	
+		food: ["sushi", "wine", "subway"]			
 	
 };
 
-console.log(studioA.name)
+var studioB = {
+		name: "Gyote",
+		getHours: function (time) {},
+		hungry: false,
+		runner: true,
+		food: function () {console.log("I'm not Hungry")}
+		
+		};
+		
+var studioC = {
+		name: "Mary J. Bliege",
+		getHours: function (time) {},
+		hungry: true,
+		runner: false,
+		food: [" Mexican Food"]
+
+		};
+
+
+for (var key in studioB) {
+	console.log("key: " + key + ", value: " + studioB[key]);
+	
+}
+
+studioA.getHours(5);
+console.log(studioA.getHours);
 
 // JSon Call and for loop
 

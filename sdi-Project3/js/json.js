@@ -27,7 +27,7 @@ var studio = {
 			"mic": "Neuman u87",
 			"preAmp": "Manley Slam!",
 			"engineer":"Dave",
-			"hours": 12
+			"hours": 16
 					
 		}
 	
