@@ -10,41 +10,41 @@ The Studio in detail
 
 
 // Global variables Property and Methods
-var studioA = studio.facility[0]; 	//accessor Method
+var studioA = studio.facility[0]; //accessor Method
 var studioB = studio.facility[1];	//accessor Method
 var studioC = studio.facility[2];	//accessor Method
 
 // Local Variables
 
-var studioA  = {
-		name: "Briney Spears",
-		getHours: function (hours){},
-		hungry: true,
-		runner: true,
-		food: ["sushi", "wine", "subway"],
-		facility: studio.facility[0]		
-	
+var studioA = {
+name: "Briney Spears",
+getHours: function (hours){},
+hungry: true,
+runner: true,
+food: ["sushi", "wine", "subway"],
+facility: studio.facility[0]	
+
 };
 
 var studioB = {
-		name: "Gyote",
-		getHours: function (time) {},
-		hungry: false,
-		runner: true,
-		food: function () {console.log("I'm not Hungry")},
-		facility: studio.facility[1]
-		
-		};
-		
-var studioC = {
-		name: "Mary J. Bliege",
-		getHours: function (time) {},
-		hungry: true,
-		runner: false,
-		food: " Mexican Food",
-		facility: studio.facility[2]
+name: "Gyote",
+getHours: function (time) {},
+hungry: false,
+runner: true,
+food: function () {console.log("I'm not Hungry")},
+facility: studio.facility[1]
 
-		};
+};
+
+var studioC = {
+name: "Mary J. Bliege",
+getHours: function (time) {},
+hungry: true,
+runner: false,
+food: " Mexican Food",
+facility: studio.facility[2]
+
+};
 
 
 var currentSessions = [studioA, studioB, studioC];	//function Method
@@ -56,43 +56,43 @@ var currentSessions = [studioA, studioB, studioC];	//function Method
 // JSon Call and for loop - Who is working
 
 for (var i=0; i < studio.facility.length; i++) {
-	var facility = studio.facility[i];
-	console.log(" All the studio's are booked and " + facility.engineer  + " is " +  facility.kind  +  " in " +  facility.room )
-	
+var facility = studio.facility[i];
+console.log(" All the studio's are booked and " + facility.engineer + " is " + facility.kind + " in " + facility.room )
 
-	
+
+
 };
 
 // A for Loop statement for what studio each artist is working in.
 
 for (var i=0; i < [studioA.name, studioB.name, studioC.name].length; i++) {
-	
-	
-	var currentNames = [(studioA.name + " in " +  studio.facility[0].room), 
-	(studioB.name + " in " +  studio.facility[1].room), (studioC.name + " in " +  studio.facility[2].room)][i];
 
-	
-	console.log("currently working in the studio is " + currentNames )
+
+var currentNames = [(studioA.name + " in " + studio.facility[0].room),
+(studioB.name + " in " + studio.facility[1].room), (studioC.name + " in " + studio.facility[2].room)][i];
+
+
+console.log("currently working in the studio is " + currentNames )
 };
 
 // How many hours are there left to record in studio A.
 
 function hoursLeft (time) {
-	var hours = studio.facility[0].hours;
-	var hoursLeft = hours - time;
-	
-	console.log("We have " + hoursLeft + " hours to record in studio A ");
-	
-	
-	
-	if (hoursLeft <= 2) {
-		
-		console.log(" We have have a limited amount of time!");
-	}	
-	if (hoursLeft == 0){ console.log("We have No time!")}	
-	;
-	
-	return hoursLeft;
+var hours = studio.facility[0].hours;
+var hoursLeft = hours - time;
+
+console.log("We have " + hoursLeft + " hours to record in studio A ");
+
+
+
+if (hoursLeft <= 2) {
+
+console.log(" We have have a limited amount of time!");
+}	
+if (hoursLeft == 0){ console.log("We have No time!")}	
+;
+
+return hoursLeft;
 };
 
 hoursLeft(3);
@@ -112,29 +112,29 @@ var micC = studio.facility[2].Mic;
 var allMics = [micA, micB, micC];
 
 /*
-  The proper mic was in studio A, therefore Britney will record here vocals with fewer takes cuting recording
- time to 4 hours*/
+The proper mic was in studio A, therefore Britney will record here vocals with fewer takes cuting recording
+time to 4 hours*/
 
 
 if (micA) {
-	// TimeLeft after session
+// TimeLeft after session
 
-	
-	console.log( "We are going to be done early tonight! Said: " + studioA.name )
-	
+
+console.log( "We are going to be done early tonight! Said: " + studioA.name )
+
 if (studioA.hungry + studioA.runner){
-	
-	console.log("Go get some food and what I want to eat is " + studioA.food  + " said " +  studioA.name)
-	
+
+console.log("Go get some food and what I want to eat is " + studioA.food + " said " + studioA.name)
+
 }
 
-		
+
 };
 
 function timeLeft (time, studio) {
-		var timeLeft = studio - time;
-		
-		return timeLeft;
+var timeLeft = studio - time;
+
+return timeLeft;
 };
 
 
@@ -142,39 +142,32 @@ function timeLeft (time, studio) {
 
 // Is there food in studio C? If Not we have to get a runner?
 
-if (studioC.runner && studioC.hungry){ 
-	console.log( studioC.name + " said: Go get some " + studioC.food)}
+if (studioC.runner && studioC.hungry){
+console.log( studioC.name + " said: Go get some " + studioC.food)}
 
 
 
 if (studioB.runner && studioB.hungry || studioA.runner && studioA.hungry ) {
-	
-	
-	
-	console.log("since there are no runners in this room and there is a runner available " + studioC.name + " said: go get the Runner from " +  studio.facility[1].room)
+
+
+
+console.log("since there are no runners in this room and there is a runner available " + studioC.name + " said: go get the Runner from " + studio.facility[1].room)
 }
 
 
 else
 // there wasnt a runner.
-	{console.log( studioC.name + " said: We Need a Runner in Studio C! ")};
-	
+{console.log( studioC.name + " said: We Need a Runner in Studio C! ")};
 
 
-	
+
+
 // The studio owener wanted to know how many hours were left in the recording session with Gyote.
 // Mean while in studio B Artist Gyote has been recording his new hit single, he has been in the studio for 5 hours.
 
 
-	
-	
-	
-};
 
 
-	
-	
-	
 
 
 
