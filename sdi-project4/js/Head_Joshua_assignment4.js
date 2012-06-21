@@ -76,14 +76,100 @@ var jLibrary = function () {
 		};
 		
 		// CHECK URL FUNCTION	
-		var url
+		function checkURL (str) {
+			
+			var end = ".com"
+			var bgn = "http://"
+			var lstr = str.lenth
+			var lw= str.indexOf(str)
+			if (str.indexOf(w)==-1){
+				return false
+			}
+			
+			if ((str.indexOf(end)==-1 || str.indexOf(end)==0) || str.indexOf(end)==lstr){
+				return false
+			}
+			if (str.indexOf(bgn)==0) {
+				return true
+				
+			}
+			
+		}
+			
+		
+		}
+		// Title Case
+		String.prototype.toTitleCase =function (){
+			var smallWords = /^\(a|an|and|as|at|but|function by(en|for|if|in|of|or|the|to|vs?\.?|vis|is)$/i;
+			
+			
+			 {
+				
+			}
+		
+			
+			
+			
+		};
+		
+		// String Separator 
+		var strinSplit = function (thing){
+			if (thing.split) {
+				
+				
+			} else{
+				
+				false (console.log("This String could not be separated."))
+			};
+			
+		}
+		
+		
+		// Decimal Place Fuction
+		var decimalPlace = function(val){
+			val.toFixed(1)
+			
+		}
+		
+			return decimalPlace
+			
+			
+		// Fuzzy Match Number
+		// FIND DATE AND TIME DIFFERENCES
+		// SUM OF NUMBERS
+		// FIND THE SMALLEST NUMBER IN ARRARY
+		var smallestValue = function(){
+			
+			Arrary.prototype.minGreatThan = function(a){
+				var t = this, r = Number.POSITIVE_INFINITY,i; //this is the positive infinity property.
+						for (var i=0; i < t.length; i++) {	
+							if (a< t{i} && t[i] < r) r = t[i]
+						};
+						
+			return r
+			}
+			
+			var number = [ 234, 24, 347, 33, 12, 90, 5, 12], givenNumber =24;
+			
+			
+		}
+		
+		// FIND THE AMOUNT OF NUMBERS IN THE ARRARY
+		var stringConversion = function(){
+			console.log(parseInt("42")); //Used the parseInt function to convert it to an actual number
+			
+		}
+		
 		
 	
-		// Return Values
+		// Returns of the objects
 		return {
 			"checkNumeric": checkNumeric,
 			"checkEMAIL": checkEMAIL,
-			"checkPhone": checkPhone
+			"checkPhone": checkPhone,
+			"smallestValue": smallestValue,
+			"stringConversion": stringConversion,
+			"stringSplit": stringSplit
 			
 		};
 		
@@ -93,5 +179,6 @@ var jLibrary = function () {
 
 console.log(newLib.checkNumeric(4));
 console.log(newLib.checkEMAIL("jhead12@live.com"));
-console.log(newLib.checkPhone("323.230.3349"))
+console.log(newLib.checkPhone("323.230.3349"));
+console.log(smallestValue());
  
