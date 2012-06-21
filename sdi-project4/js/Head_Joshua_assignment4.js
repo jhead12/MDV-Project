@@ -14,7 +14,9 @@ String
     Does a string follow an aaa@bbb.ccc pattern like an email address?
     Is the string a URL? (Does it start with http: or https:?)
     Title-case a string (split into words, then uppercase the first letter of each word)
-    Given a string that is a list of things separated by a given string, as well as another string separator, return a string with the first separator changed to the second: "a,b,c" + "," + "/" → "a/b/c".
+    Given a string that is a list of things separated by a given string, 
+	as well as another string separator, 
+	return a string with the first separator changed to the second: "a,b,c" + "," + "/" → "a/b/c".
 
 Number	
 
@@ -47,8 +49,9 @@ var jLibrary = function () {
 		// CHECK EMAIL FUNCTION
 		var checkEMAIL = function (val) {
 			var web = [".com", ".net" ,".me"]
-						
-			if (web && "@") {
+			// Email Format using the RegExp
+			var emailStyle = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;			
+			if (web, emailStyle) {
 				return true;
 					
 			} else{
@@ -59,23 +62,21 @@ var jLibrary = function () {
 		
 		
 		// CHECK PHONE NUMBER FUNCTION
-		var checkPhone = function (val) {
-			var first = val.substr(0, 2);
-			var lenght = val.lenght == 6;
-			
-			if ((isNaN(val)) && lenght) {
-				return false;
+		var checkPhone = function (val){
+			var phoneNumber = /^\(?(\d{3})\)?[- . ]?(\d{3})[-  . ]?(\d{4})$/;
+			if (phoneNumber) {
+				return true;
 				
 			} else{
 				
-				return true;
+				return false;
 			};
-		
+			
+			
 		};
 		
-		// NAME FUNCTION
-		
 		// CHECK URL FUNCTION	
+		var url
 		
 	
 		// Return Values
@@ -92,4 +93,5 @@ var jLibrary = function () {
 
 console.log(newLib.checkNumeric(4));
 console.log(newLib.checkEMAIL("jhead12@live.com"));
+console.log(newLib.checkPhone("323.230.3349"))
  
