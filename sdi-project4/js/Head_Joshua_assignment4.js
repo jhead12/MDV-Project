@@ -8,11 +8,13 @@
 */
 
 /*
+
+Notes
 String	
 
-    Does a string follow a 123-456-7890 pattern like a phone number?
-    Does a string follow an aaa@bbb.ccc pattern like an email address?
-    Is the string a URL? (Does it start with http: or https:?)
+   * Does a string follow a 123-456-7890 pattern like a phone number?
+   * Does a string follow an aaa@bbb.ccc pattern like an email address?
+   * Is the string a URL? (Does it start with http: or https:?)
     Title-case a string (split into words, then uppercase the first letter of each word)
     Given a string that is a list of things separated by a given string, 
 	as well as another string separator, 
@@ -127,23 +129,51 @@ var jLibrary = function () {
 		
 		// Decimal Place Fuction
 		var decimalPlace = function(val){
-			val.toFixed(1)
+			val.toFixed(2)
 			
 		}
 		
-			return decimalPlace
+		
 			
 			
-		// Fuzzy Match Number
-		// FIND DATE AND TIME DIFFERENCES
+			
+			
+			
+		 // Fuzzy Match Number
+		 // FIND DATE AND TIME DIFFERENCES
+		 /*
+		 var date1 = new Date {
+		 		 			year:2011,
+		 		 			month:3,
+		 		 			day:4
+		 		 			
+		 		 			};
+		 		 		var date2 = new Date{
+		 		 			year:2012,
+		 		 			month:4,
+		 		 			day:0
+		 		 			
+		 		 			};
+		 		 			
+		 		 	
+		 		 		var differenTime =date2.getTime() - date1.getTime();
+		 		 		
+		 		 		return differntTime;
+		 		 		*/
+		 
+		
 		// SUM OF NUMBERS
+		
+		
+		
+		
 		// FIND THE SMALLEST NUMBER IN ARRARY
 		var smallestValue = function(){
 			
 			Arrary.prototype.minGreatThan = function(a){
 				var t = this, r = Number.POSITIVE_INFINITY,i; //this is the positive infinity property.
 						for (var i=0; i < t.length; i++) {	
-							if (a< t{i} && t[i] < r) r = t[i]
+							if (a< t[i] && t[i] < r) r = t[i]
 						};
 						
 			return r
@@ -158,7 +188,7 @@ var jLibrary = function () {
 		var stringConversion = function(){
 			console.log(parseInt("42")); //Used the parseInt function to convert it to an actual number
 			
-		}
+		};
 		
 		
 	
@@ -169,9 +199,11 @@ var jLibrary = function () {
 			"checkPhone": checkPhone,
 			"smallestValue": smallestValue,
 			"stringConversion": stringConversion,
-			"stringSplit": stringSplit
+			"stringSplit": stringSplit,
+			"decimalPlace":decimalPlace,
+			"differentTime": differentTime
 			
-		};
+		}
 		
 	
 };
@@ -181,4 +213,6 @@ console.log(newLib.checkNumeric(4));
 console.log(newLib.checkEMAIL("jhead12@live.com"));
 console.log(newLib.checkPhone("323.230.3349"));
 console.log(smallestValue());
+console.log(decimalPlace);
+console.log(differentTime);
  
